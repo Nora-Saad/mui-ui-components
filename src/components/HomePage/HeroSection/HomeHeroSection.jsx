@@ -9,7 +9,7 @@ const HomeHeroSection = () => {
       <Box
         sx={{
         position: 'relative', 
-        py: 20,
+        py: 17,
         px: "10%",
       }}
       >
@@ -18,16 +18,18 @@ const HomeHeroSection = () => {
         sx={{
           display: 'flex',
           flexDirection:  'column' ,
-          minWidth: 300,         
-          maxWidth: 600, 
+          minWidth: '50%',         
+          maxWidth:{sm:'80%', md:'550px', lg:'600px'}
         }}>
         <Typography variant="gradientSpan" > WE MAKE THE BEST IT SOLUTIONS</Typography>
-        <Typography variant="h1">Web, Mobile and Custom Software Development Agency</Typography>
+        <Typography variant="h1" >Web, Mobile and Custom Software Development Agency</Typography>
         <Typography variant="body1" sx={{ mt: 4 }}>
         Introduce your business effectively to the world, streamline your
         processes, and boost revenue through our cost-effective services.
         </Typography>
-        <Box
+       
+      </Box>
+      <Box
     sx={{
       display: 'flex',
       flexDirection: { xs: 'column', sm: 'row' },
@@ -37,24 +39,23 @@ const HomeHeroSection = () => {
       mt: 5,
     }}
   >
-    <MUIButton
-      text="Schedule a call"
-      backgroundColor="#655DBB"
-      textColor="white"
-      borderColor="#655DBB"
-      width={{ xs: '85%', sm: '40%' }}
-    />
+          <MUIButton
+          text="Schedule a call"
+          backgroundColor="#655DBB"
+          textColor="white"
+          borderColor="#655DBB"
+          width={{ xs: '80%', sm: 'auto' }}
+          />
 
-    <MUIButton
-      text="View Portfolio"
-      backgroundColor="white"
-      textColor="black"
-      borderColor="black"
-      width={{ xs: '85%', sm: '40%' }}
-    />
-  </Box>
-      </Box>
-
+        <MUIButton
+          text="View Portfolio"
+          backgroundColor="white"
+          textColor="black"
+          borderColor="black"
+          width={{ xs: '80%', sm: 'auto' }}
+          
+        />
+        </Box>
       <Box sx={{
         position: 'absolute',
         right: 0,
@@ -65,8 +66,9 @@ const HomeHeroSection = () => {
         backgroundSize: 'cover',
         minWidth: 300,
         width:'100%',
-        height: '1000px',
-        overflow: 'hidden'
+        height: 'auto',
+        overflow: 'hidden',
+        zIndex:'-1'
     }}>
       <HeroBinaryImage/>
       </Box>

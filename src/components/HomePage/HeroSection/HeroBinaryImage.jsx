@@ -4,7 +4,7 @@ import './HeroBinaryImage.css';
 
 const HeroBinaryImage = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('smmd'));
 
     if (isMobile) {
         return (
@@ -25,17 +25,18 @@ const HeroBinaryImage = () => {
         <Box
             sx={{
                 position: 'relative',
-                right:'-100px',
-                width: '100%',
+                left: '50%',
+                right: '-100px',
+                width: '50%',
                 overflow:'hidden'
            
           }}
         >
            <svg
             className='svg-binary-img'
-            width='90%'
+            width='700'
             height='654'
-            viewBox={`0 0 200 654`}
+            viewBox={`0 0 700 654`}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-label="Hero binary image representing the binary number 10101010"

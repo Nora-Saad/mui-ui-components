@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// MUIButton.js
 import { Button as MuiButton } from '@mui/material';
 
 const MUIButton = ({
@@ -10,13 +10,10 @@ const MUIButton = ({
   width = "auto",
   ...props
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
+  
   return (
     <MuiButton
       variant="outlined"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       {...props}
       sx={{
         padding: '14px 42px',
@@ -27,13 +24,19 @@ const MUIButton = ({
         cursor: 'pointer',
         margin: margin,
         width: width,
-        backgroundColor: isHovered ? textColor : backgroundColor,
-        color: isHovered ? backgroundColor : textColor,
-        borderColor: isHovered ? backgroundColor : borderColor,
-        boxShadow: isHovered ? '0 4px 8px rgba(0, 0, 0, 0.2)' : 'none',
-        transform: isHovered ? 'translateY(-2px)' : 'none',
-        transition: 'all 0.6s ease',
+        backgroundColor: backgroundColor,
+        color: textColor,
+        borderColor: borderColor,
+        transition: 'all 0.3s ease',
         textTransform: 'none',
+
+        '&:hover': {
+          backgroundColor: textColor,
+          color: backgroundColor,
+          borderColor: backgroundColor,
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+          transform: 'translateY(-2px)',
+        },
       }}
     >
       {text}
