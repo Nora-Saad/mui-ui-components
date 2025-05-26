@@ -13,7 +13,7 @@ root.render(
       styles={{
         body: {
           minWidth: "300px",
-          overflow: "hidden",
+          overflowX: "hidden",
         },
       }}
     />

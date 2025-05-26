@@ -10,7 +10,7 @@ const HomeHeroSection = () => {
         sx={{
         position: 'relative', 
         py: 17,
-        px: "10%",
+        px: "7%",
       }}
       >
           

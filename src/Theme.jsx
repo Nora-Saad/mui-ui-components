@@ -1,5 +1,3 @@
-// theme.js
-import { Margin } from '@mui/icons-material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 const sharedTypography = {
