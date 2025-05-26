@@ -1,4 +1,5 @@
 // theme.js
+import { Margin } from '@mui/icons-material';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 const sharedTypography = {
@@ -43,6 +44,19 @@ const sharedTypography = {
     fontWeight: 600,
     lineHeight: 1.5,
     fontSize: '0.9rem',
+  },
+  gradientSpan: {
+    fontFamily: 'Inter, sans-serif',
+    fontSize: '1rem',
+    fontStyle: 'normal',
+    fontWeight: 500,
+    lineHeight: '150%',
+    textTransform: 'uppercase',
+    background: 'linear-gradient(270deg, #7D7BB7 28.51%, #2E92C3 100%)',
+    backgroundClip: 'text',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    marginBottom: '10px'
   },
 };
 

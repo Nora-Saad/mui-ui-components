@@ -1,0 +1,25 @@
+@keyframes colorChange {
+    0%, 100% {
+      fill: #615f90;
+      opacity: 0.3;
+    }
+    50% {
+      fill: #8785c4;
+      opacity: 1;
+    }
+  }
+  
+  .binary-number-g1 {
+    animation: colorChange 3s infinite ease-in-out;
+    animation-delay: calc(6 * 0.3s);
+  }
+  
+  .binary-number-g2 {
+    animation: colorChange 4s infinite ease-in-out;
+    animation-delay: calc(2 * 0.6s);
+  }
+  
+  .binary-number-g3 {
+    animation: colorChange 2s infinite ease-in-out;
+    animation-delay: calc(3 * 0.6s);
+  }

@@ -10,6 +10,7 @@ const Layout = ({ children }) => {
       <Box
         component="main"
         sx={{
+          width: '100%',
         minHeight: '100vh',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
@@ -20,7 +21,9 @@ const Layout = ({ children }) => {
         },
       }}
     >
-        <Container maxWidth="lg">{children}</Container>
+        <Container  maxWidth="xl" disableGutters>
+          {children}
+        </Container>
       </Box>
       <Footer />
     </>
