@@ -1,11 +1,12 @@
 import Layout from '../components/Layout/layout';
-import Typography from '@mui/material/Typography';
 import HeroSection from '../components/HomePage/HeroSection/HomeHeroSection';
+import ScrollableContentWithFixedMenu from '../components/HomePage/MenuWithScrollableContent/ScrollableContentWithFixedMenu';
 
 const Home = () => {
   return (
     <Layout>
-      <HeroSection/>
+      <HeroSection />
+      <ScrollableContentWithFixedMenu/>
     </Layout>
   );
 };
