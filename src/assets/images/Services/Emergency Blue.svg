@@ -1,0 +1,57 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="77" height="77">
+	<title>health_12102426</title>
+	<style>
+		.s0 { fill: none;stroke: #000000;stroke-linecap: round;stroke-linejoin: round;stroke-width: 15 } 
+	</style>
+	<filter id="f0">
+		<feFlood flood-color="#307bc4" flood-opacity="1" />
+		<feBlend mode="normal" in2="SourceGraphic"/>
+		<feComposite in2="SourceAlpha" operator="in" />
+	</filter>
+	<g id="Folder 1" filter="url(#f0)">
+		<g>
+			<path class="s0" d="m7.5 279.5v-30c0-33.1 26.9-60 60-60h294c33.1 0 60 26.9 60 60v195c0 33.1-26.9 60-60 60h-294c-33.1 0-60-26.9-60-60v-135"/>
+			<path class="s0" d="m391.5 414.5v30c0 16.5-13.5 30-30 30h-294c-16.5 0-30-13.5-30-30v-195c0-16.5 13.5-30 30-30h294c16.5 0 30 13.5 30 30v135"/>
+			<path class="s0" d="m132 189.5v-45c0-16.6 13.4-30 30-30h105c16.6 0 30 13.4 30 30v45"/>
+			<path fill-rule="evenodd" class="s0" d="m252 114.5v75"/>
+			<path fill-rule="evenodd" class="s0" d="m177 189.5v-75"/>
+			<path class="s0" d="m421.5 249.5c16.5 0 30 13.5 30 30v97.5h-30"/>
+			<path fill-rule="evenodd" class="s0" d="m451.5 317h-30"/>
+			<path fill-rule="evenodd" class="s0" d="m312 317h-67.5v-67.5h-60v67.5h-67.5v60h67.5v67.5h60v-67.5h67.5z"/>
+			<path class="s0" d="m500.4 114.5l-53.1-92c-11.5-20-40.4-20-51.9 0l-53.2 92c-11.5 20 2.9 45 26 45h106.3c23 0 37.5-25 25.9-45z"/>
+			<path fill-rule="evenodd" class="s0" d="m421.3 52.5v39.5"/>
+			<path fill-rule="evenodd" class="s0" d="m421.3 122"/>
+			<path fill-rule="evenodd" class="s0" d="m177 144.5h75"/>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+	</g>
+</svg>
