@@ -1,26 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react';
 import {
-  Box,
-  Container,
-  Typography,
-  IconButton,
-  Button,
-  Menu,
-  MenuItem,
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  useMediaQuery
+  Box, Button, Menu, MenuItem, Typography, Divider, IconButton,
+  Drawer, List, ListItem, ListItemIcon, ListItemText, Accordion, AccordionSummary, AccordionDetails,
+  useMediaQuery,Container
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { Link as RouterLink } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import { ColorModeContext } from '../../Context/ThemeModeContext';
+import CloseIcon from '@mui/icons-material/Close';
 
 const BusinessIcon = React.lazy(() => import('../../assets/images/Navbar-icons/BusinessIcon'));
 const DentalIcon = React.lazy(() => import('../../assets/images/Navbar-icons/DentalIcon'));
@@ -31,12 +23,15 @@ const CustomSoftwareIcon = React.lazy(() => import('../../assets/images/Navbar-i
 const NavBar = () => {
   const { mode, toggleColorMode } = useContext(ColorModeContext);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery('(max-width: 1024px)');
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const toggleDrawer = () => setMobileOpen(!mobileOpen);
 
   const [scrolled, setScrolled] = useState(false);
   const [anchorServices, setAnchorServices] = useState(null);
   const [anchorPricing, setAnchorPricing] = useState(null);
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -46,7 +41,7 @@ const NavBar = () => {
 
   const handleMenuOpen = (setter) => (event) => setter(event.currentTarget);
   const handleMenuClose = (setter) => () => setter(null);
-  const toggleDrawer = () => setDrawerOpen(!drawerOpen);
+ 
 
   return (
 
@@ -66,7 +61,7 @@ const NavBar = () => {
           alignItems: 'center',
           px: 0,
           transition: 'all 0.3s ease-in-out',
-          zIndex: 1300,
+          zIndex: 100,
         }}
       >
         <Box
@@ -84,10 +79,136 @@ const NavBar = () => {
             transition: 'all 0.3s ease-in-out',
           }}
         >
-          <Typography variant="body2">Logo</Typography>
+        <Typography variant="body2">Logo</Typography>
+
+        {isMobile ? (
+        <>
+           <Box display="flex" alignItems="center" gap={1}>
+            <IconButton onClick={toggleColorMode} color="inherit">
+              {mode === 'light' ? (
+                <DarkModeIcon sx={{ color: '#2E92C3', width: 30, height: 30 }} />
+              ) : (
+                <LightModeIcon sx={{ color: 'yellow', width: 30, height: 30 }} />
+              )}
+            </IconButton>
+
+            <IconButton onClick={toggleDrawer}>
+              <MenuIcon />
+            </IconButton>
+          </Box>
+
+          {/* Mobile Drawer */}
+          <Drawer anchor="right" open={mobileOpen} onClose={toggleDrawer}>
+              <Box sx={{ width: 250, backgroundColor: 'rgb(202, 205, 243)', height: '100%', zIndex: '200' }}>
+                
+                 {/* Close Button */}
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    p: 2,
+                    borderBottom: '1px solid #ccc',
+                  }}
+                >
+                  <IconButton onClick={toggleDrawer}>
+                    <CloseIcon />
+                  </IconButton>
+                </Box>
+                
+              <List>
+
+                {/* Services Accordion */}
+                <Accordion  disableGutters sx={{ backgroundColor: 'rgb(202, 205, 243)', boxShadow: 'none',  borderBottom: 'none',
+    '&:before': {
+      display: 'none',
+    }, }}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography>Services</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography variant="subtitle2">Web Development</Typography>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 20 }} ><BusinessIcon /></ListItemIcon>
+                      <ListItemText primary="Business Websites" />
+                    </ListItem>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 20 }}><DentalIcon /></ListItemIcon>
+                      <ListItemText primary="Dental Websites" />
+                    </ListItem>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 20 }}><ECommerceIcon /></ListItemIcon>
+                      <ListItemText primary="ECommerce Websites" />
+                    </ListItem>
+                    <Divider sx={{ my: 1 }} />
+                    <Typography variant="subtitle2">Software Development</Typography>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 20 }}><MobilIcon /></ListItemIcon>
+                      <ListItemText primary="Mobile Development" />
+                    </ListItem>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 20 }}><CustomSoftwareIcon /></ListItemIcon>
+                      <ListItemText primary="Custom Software Development" />
+                    </ListItem>
+                  </AccordionDetails>
+                </Accordion>
+
+                {/* Pricing Accordion */}
+                <Accordion disableGutters sx={{ backgroundColor: 'rgb(202, 205, 243)', boxShadow: 'none',  borderBottom: 'none',
+    '&:before': {
+      display: 'none',
+    }, }}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography>Pricing</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography variant="subtitle2">Web Development</Typography>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 20 }}><BusinessIcon /></ListItemIcon>
+                      <ListItemText primary="Business Packages" />
+                    </ListItem>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 20 }}><DentalIcon /></ListItemIcon>
+                      <ListItemText primary="Dental Packages" />
+                    </ListItem>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 20 }}><ECommerceIcon /></ListItemIcon>
+                      <ListItemText primary="ECommerce Packages" />
+                    </ListItem>
+                    <Divider sx={{ my: 1 }} />
+                    <Typography variant="subtitle2">Software Development</Typography>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 20 }}><MobilIcon /></ListItemIcon>
+                      <ListItemText primary="Mobile Packages" />
+                    </ListItem>
+                    <ListItem button component={RouterLink} to="/" disableGutters>
+                      <ListItemIcon sx={{ minWidth: 22 }}><CustomSoftwareIcon /></ListItemIcon>
+                      <ListItemText primary="Custom Software Packages"   />
+                    </ListItem>
+                  </AccordionDetails>
+                </Accordion>
+
+                {/* Simple Links */}
+                <ListItem button component={RouterLink} to="/blogs">
+                  <ListItemText primary="Blogs" />
+                </ListItem>
+                <ListItem button component={RouterLink} to="/about">
+                  <ListItemText primary="About Us" />
+                </ListItem>
+                <ListItem button component={RouterLink} to="/contactus">
+                  <ListItemText primary="Contact Us" />
+                </ListItem>
+                <ListItem button component="a" href="https://clients.alphaquasartech.com/login">
+                  <ListItemText primary="Client Portal" />
+                </ListItem>
+              </List>
+            </Box>
+          </Drawer>
+            </>
+          ) : (
+            <>
+               {/* Desktop Menu */}
           <Box display="flex" alignItems="center" gap={2}>
-          {/* Desktop Menu */}
-        
+         
           <Button
             onClick={handleMenuOpen(setAnchorServices)}
             endIcon={<KeyboardArrowDownIcon />}
@@ -184,20 +305,21 @@ const NavBar = () => {
             </Menu>
          
 
-          <Button component={RouterLink} to="/blogs">Blogs</Button>
-          <Button component={RouterLink} to="/about">About Us</Button>
-          <Button component={RouterLink} to="/contactus">Contact Us</Button>
-          <Button href="https://clients.alphaquasartech.com/login">Client Portal</Button>
-        </Box>
-
-
-          <IconButton onClick={toggleColorMode} color="inherit">
-            {mode === 'light' ? (
-              <DarkModeIcon sx={{ color: '#2E92C3', width: 30, height: 30 }} />
-            ) : (
-              <LightModeIcon sx={{ color: 'yellow', width: 30, height: 30 }} />
-            )}
-          </IconButton>
+          <Button component={RouterLink} to="/blogs" sx={{ whiteSpace: 'nowrap' }}>Blogs</Button>
+          <Button component={RouterLink} to="/about" sx={{ whiteSpace: 'nowrap' }}>About Us</Button>
+          <Button component={RouterLink} to="/contactus" sx={{ whiteSpace: 'nowrap' }}>Contact Us</Button>
+          <Button href="https://clients.alphaquasartech.com/login" sx={{ whiteSpace: 'nowrap' }}>Client Portal</Button>
+              </Box>
+              <IconButton onClick={toggleColorMode} color="inherit">
+              {mode === 'light' ? (
+                <DarkModeIcon sx={{ color: '#2E92C3', width: 30, height: 30 }} />
+              ) : (
+                <LightModeIcon sx={{ color: 'yellow', width: 30, height: 30 }} />
+              )}
+            </IconButton>
+          </>
+          )}
+       
       </Box>
       </Container>
      
