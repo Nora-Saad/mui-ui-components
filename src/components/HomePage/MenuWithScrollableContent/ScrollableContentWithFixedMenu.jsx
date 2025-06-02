@@ -15,7 +15,9 @@ const menuItems = [
       image: whiteningImg,
       paragraphs: [
         'Teeth whitening is a popular cosmetic dental procedure that effectively removes stains caused by coffee, tea, wine, smoking, and aging. Using safe and approved bleaching agents, we can restore your teeth to a brighter and more youthful appearance.',
-        'Our in-office whitening treatments produce noticeable results in just one session, and we also offer take-home kits for ongoing maintenance. You’ll leave with a smile that’s not only whiter but also more confident.'
+          'Our in-office whitening treatments produce noticeable results in just one session, and we also offer take-home kits for ongoing maintenance. You’ll leave with a smile that’s not only whiter but also more confident.',
+        'Teeth whitening is a popular cosmetic dental procedure that effectively removes stains caused by coffee, tea, wine, smoking, and aging. Using safe and approved bleaching agents, we can restore your teeth to a brighter and more youthful appearance.',
+        'Our in-office whitening treatments produce noticeable results in just one session, and we also offer take-home kits for ongoing maintenance. You’ll leave with a smile that’s not only whiter but also more confident.',
       ]
     },
     {
@@ -24,7 +26,21 @@ const menuItems = [
       image: RootImg,
       paragraphs: [
         'Root canals are necessary when the pulp inside your tooth becomes inflamed or infected, often due to deep decay or trauma. This treatment allows us to clean, disinfect, and seal the tooth, saving it from extraction.',
-        'Thanks to modern technology and local anesthetics, the procedure is virtually painless and highly successful. Our goal is to preserve your natural tooth and relieve you from pain and infection.'
+          'Thanks to modern technology and local anesthetics, the procedure is virtually painless and highly successful. Our goal is to preserve your natural tooth and relieve you from pain and infection.',
+        'Root canals are necessary when the pulp inside your tooth becomes inflamed or infected, often due to deep decay or trauma. This treatment allows us to clean, disinfect, and seal the tooth, saving it from extraction.',
+          'Thanks to modern technology and local anesthetics, the procedure is virtually painless and highly successful. Our goal is to preserve your natural tooth and relieve you from pain and infection.',
+        'Root canals are necessary when the pulp inside your tooth becomes inflamed or infected, often due to deep decay or trauma. This treatment allows us to clean, disinfect, and seal the tooth, saving it from extraction.',
+          'Thanks to modern technology and local anesthetics, the procedure is virtually painless and highly successful. Our goal is to preserve your natural tooth and relieve you from pain and infection.',
+        'Root canals are necessary when the pulp inside your tooth becomes inflamed or infected, often due to deep decay or trauma. This treatment allows us to clean, disinfect, and seal the tooth, saving it from extraction.',
+          'Thanks to modern technology and local anesthetics, the procedure is virtually painless and highly successful. Our goal is to preserve your natural tooth and relieve you from pain and infection.',
+        'Root canals are necessary when the pulp inside your tooth becomes inflamed or infected, often due to deep decay or trauma. This treatment allows us to clean, disinfect, and seal the tooth, saving it from extraction.',
+          'Thanks to modern technology and local anesthetics, the procedure is virtually painless and highly successful. Our goal is to preserve your natural tooth and relieve you from pain and infection.',
+        'Root canals are necessary when the pulp inside your tooth becomes inflamed or infected, often due to deep decay or trauma. This treatment allows us to clean, disinfect, and seal the tooth, saving it from extraction.',
+          'Thanks to modern technology and local anesthetics, the procedure is virtually painless and highly successful. Our goal is to preserve your natural tooth and relieve you from pain and infection.',
+        'Root canals are necessary when the pulp inside your tooth becomes inflamed or infected, often due to deep decay or trauma. This treatment allows us to clean, disinfect, and seal the tooth, saving it from extraction.',
+          'Thanks to modern technology and local anesthetics, the procedure is virtually painless and highly successful. Our goal is to preserve your natural tooth and relieve you from pain and infection.',
+        'Root canals are necessary when the pulp inside your tooth becomes inflamed or infected, often due to deep decay or trauma. This treatment allows us to clean, disinfect, and seal the tooth, saving it from extraction.',
+        'Thanks to modern technology and local anesthetics, the procedure is virtually painless and highly successful. Our goal is to preserve your natural tooth and relieve you from pain and infection.',
       ]
     },
     {
@@ -42,7 +58,13 @@ const menuItems = [
       image: ImplantImg,
       paragraphs: [
         'Dental implants are the most reliable and natural-looking solution for missing teeth. They are titanium posts surgically placed into the jawbone, acting as artificial roots for crowns, bridges, or dentures.',
-        'Implants promote jawbone health and facial structure, improving function and aesthetics. With proper care, they can last a lifetime and offer unmatched stability and comfort.'
+        'Implants promote jawbone health and facial structure, improving function and aesthetics. With proper care, they can last a lifetime and offer unmatched stability and comfort.',
+        'Dental implants are the most reliable and natural-looking solution for missing teeth. They are titanium posts surgically placed into the jawbone, acting as artificial roots for crowns, bridges, or dentures.',
+        'Implants promote jawbone health and facial structure, improving function and aesthetics. With proper care, they can last a lifetime and offer unmatched stability and comfort.',
+     'Dental implants are the most reliable and natural-looking solution for missing teeth. They are titanium posts surgically placed into the jawbone, acting as artificial roots for crowns, bridges, or dentures.',
+        'Implants promote jawbone health and facial structure, improving function and aesthetics. With proper care, they can last a lifetime and offer unmatched stability and comfort.',
+        'Dental implants are the most reliable and natural-looking solution for missing teeth. They are titanium posts surgically placed into the jawbone, acting as artificial roots for crowns, bridges, or dentures.',
+        'Implants promote jawbone health and facial structure, improving function and aesthetics. With proper care, they can last a lifetime and offer unmatched stability and comfort.',
       ]
     },
     {
@@ -51,7 +73,21 @@ const menuItems = [
       image: CrownImg,
       paragraphs: [
         'Crowns are custom-made caps that cover and protect damaged or decayed teeth. They restore the shape, size, and strength of the tooth while improving its appearance.',
-        'Whether you\'re dealing with cracks, large fillings, or post-root canal care, our high-quality ceramic and porcelain crowns provide a seamless and durable solution that mimics your natural tooth.'
+          'Whether you\'re dealing with cracks, large fillings, or post-root canal care, our high-quality ceramic and porcelain crowns provide a seamless and durable solution that mimics your natural tooth.',
+        'Crowns are custom-made caps that cover and protect damaged or decayed teeth. They restore the shape, size, and strength of the tooth while improving its appearance.',
+        'Whether you\'re dealing with cracks, large fillings, or post-root canal care, our high-quality ceramic and porcelain crowns provide a seamless and durable solution that mimics your natural tooth.',
+      'Crowns are custom-made caps that cover and protect damaged or decayed teeth. They restore the shape, size, and strength of the tooth while improving its appearance.',
+          'Whether you\'re dealing with cracks, large fillings, or post-root canal care, our high-quality ceramic and porcelain crowns provide a seamless and durable solution that mimics your natural tooth.',
+        'Crowns are custom-made caps that cover and protect damaged or decayed teeth. They restore the shape, size, and strength of the tooth while improving its appearance.',
+        'Whether you\'re dealing with cracks, large fillings, or post-root canal care, our high-quality ceramic and porcelain crowns provide a seamless and durable solution that mimics your natural tooth.',
+        'Crowns are custom-made caps that cover and protect damaged or decayed teeth. They restore the shape, size, and strength of the tooth while improving its appearance.',
+        'Whether you\'re dealing with cracks, large fillings, or post-root canal care, our high-quality ceramic and porcelain crowns provide a seamless and durable solution that mimics your natural tooth.',
+      'Crowns are custom-made caps that cover and protect damaged or decayed teeth. They restore the shape, size, and strength of the tooth while improving its appearance.',
+      'Whether you\'re dealing with cracks, large fillings, or post-root canal care, our high-quality ceramic and porcelain crowns provide a seamless and durable solution that mimics your natural tooth.',
+    'Crowns are custom-made caps that cover and protect damaged or decayed teeth. They restore the shape, size, and strength of the tooth while improving its appearance.',
+        'Whether you\'re dealing with cracks, large fillings, or post-root canal care, our high-quality ceramic and porcelain crowns provide a seamless and durable solution that mimics your natural tooth.',
+      'Crowns are custom-made caps that cover and protect damaged or decayed teeth. They restore the shape, size, and strength of the tooth while improving its appearance.',
+      'Whether you\'re dealing with cracks, large fillings, or post-root canal care, our high-quality ceramic and porcelain crowns provide a seamless and durable solution that mimics your natural tooth.',
       ]
     },
     {
