@@ -109,30 +109,56 @@ const menuItems = [
     const selectedItem = menuItems.find(item => item.id === selected);
   
     return (
-      <Box sx={{ display: 'flex', height: '500px' }}>
+
+      <Box component="section" sx={{ padding: '50px' }}>
+        <Box sx={{textAlign:"center"}}>
+        <Typography variant="gradientSpan"   > Services</Typography>
+        <Typography variant="h2"  >Check our Services</Typography>
+        </Box>
+
+      <Box sx={{ display: 'flex', height: '100%', backgroundColor:'#f9f9f9' }}>
         {/* Fixed Menu */}
         <Box
           sx={{
-            width: 200,
+              width: 250,
+            height: '100%',
             borderRight: '1px solid #ccc',
             position: 'sticky',
             top: 0,
-            alignSelf: 'flex-start',
-            backgroundColor: '#f5f5f5',
+            alignSelf: 'center',
+           
           }}
         >
           <List>
-            {menuItems.map(item => (
-              <ListItem key={item.id} disablePadding>
-                <ListItemButton
-                  selected={selected === item.id}
-                  onClick={() => setSelected(item.id)}
-                >
-                  <ListItemText primary={item.label} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
+  {menuItems.map((item, index) => (
+    <ListItem
+      key={item.id}
+      disablePadding
+      sx={{ flexDirection: 'column', alignItems: 'flex-start' }}
+    >
+      <ListItemButton
+        selected={selected === item.id}
+        onClick={() => setSelected(item.id)}
+        sx={{ width: '100%', textAlign: 'center' }}
+      >
+        <ListItemText primary={item.label} />
+      </ListItemButton>
+
+      {/* Only show border if it's not the last item */}
+      {index !== menuItems.length - 1 && (
+        <Box
+          sx={{
+            width: '80%',
+            height: '1px',
+            backgroundColor: '#7D7BB7',
+            alignSelf: 'center',
+          }}
+        />
+      )}
+    </ListItem>
+  ))}
+</List>
+
         </Box>
   
         {/* Scrollable Content */}
@@ -140,7 +166,6 @@ const menuItems = [
           sx={{
             flexGrow: 1,
             overflowY: 'auto',
-            padding: 2,
             height: '500px',
           }}
         >
@@ -161,12 +186,13 @@ const menuItems = [
   
             {/* Paragraphs */}
             {selectedItem.paragraphs.map((text, index) => (
-              <Typography key={index} variant="body1" paragraph>
+              <Typography key={index} variant="body1" >
                 {text}
               </Typography>
             ))}
           </Paper>
         </Box>
+      </Box>
       </Box>
     );
   };
