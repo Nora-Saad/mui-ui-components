@@ -1,4 +1,4 @@
-import Box from '@mui/material/Box';
+import { Box, Container } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import HeroBinaryImage from './HeroBinaryImage';
 import GradientBackGroundImage from '../../../assets/images/Hero-gradient-background.svg';
@@ -6,14 +6,14 @@ import MUIButton from '../../Shared/MUIButton';
 
 const HomeHeroSection = () => {
   return (
-      <Box
+    <Box
+      component="section"
         sx={{
         position: 'relative', 
         py: 17,
-        px: "7%",
       }}
       >
-          
+         <Container maxWidth="xl2" >
       <Box
         sx={{
           display: 'flex',
@@ -55,7 +55,7 @@ const HomeHeroSection = () => {
           width={{ xs: '80%', sm: 'auto' }}
           
         />
-        </Box>
+      </Box>
       <Box sx={{
         position: 'absolute',
         right: 0,
@@ -71,7 +71,8 @@ const HomeHeroSection = () => {
         zIndex:'-1'
     }}>
       <HeroBinaryImage/>
-      </Box>
+        </Box>
+        </Container>
     </Box>
   );
 };

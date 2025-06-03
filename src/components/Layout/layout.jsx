@@ -12,18 +12,17 @@ const Layout = ({ children }) => {
         sx={{
           width: '100%',
         minHeight: '100vh',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundRepeat: 'repeat',
+        backgroundSize: 'contain',
         // Only apply background image on medium screens and up
         '@media (min-width:900px)': {
           backgroundImage: 'url(../assets/images/BinaryBg.webp)',
         },
       }}
     >
-        <Container  maxWidth="xl" disableGutters>
+       
           {children}
-        </Container>
+     
       </Box>
       <Footer />
     </>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Box, Grid, List, ListItem, ListItemButton, ListItemText, Typography, Paper } from '@mui/material';
+import  { useState } from 'react';
+import { Box, Container, List, ListItem, ListItemButton, ListItemText, Typography, Paper } from '@mui/material';
 import CrownImg from '../../../assets/images/Services/Dental Crown Blue.svg';
 import EmergencyImg from '../../../assets/images/Services/Emergency Blue.svg';
 import ExamsImg from '../../../assets/images/Services/Exams Blue.svg';
@@ -110,89 +110,91 @@ const menuItems = [
   
     return (
 
-      <Box component="section" sx={{ padding: '50px' }}>
-        <Box sx={{textAlign:"center"}}>
-        <Typography variant="gradientSpan"   > Services</Typography>
-        <Typography variant="h2"  >Check our Services</Typography>
-        </Box>
+      <Box component="section" >
+         <Container maxWidth="xl2" >
+            <Box sx={{textAlign:"center"}}>
+            <Typography variant="gradientSpan"   > Services</Typography>
+            <Typography variant="h2"  >Check our Services</Typography>
+            </Box>
 
-      <Box sx={{ display: 'flex', height: '100%', backgroundColor:'#f9f9f9' }}>
-        {/* Fixed Menu */}
-        <Box
-          sx={{
-              width: 250,
-            height: '100%',
-            borderRight: '1px solid #ccc',
-            position: 'sticky',
-            top: 0,
-            alignSelf: 'center',
-           
-          }}
-        >
-          <List>
-  {menuItems.map((item, index) => (
-    <ListItem
-      key={item.id}
-      disablePadding
-      sx={{ flexDirection: 'column', alignItems: 'flex-start' }}
-    >
-      <ListItemButton
-        selected={selected === item.id}
-        onClick={() => setSelected(item.id)}
-        sx={{ width: '100%', textAlign: 'center' }}
+            <Box sx={{ display: 'flex', height: '100%', backgroundColor:'#f9f9f9' }}>
+          {/* Fixed Menu */}
+          <Box
+            sx={{
+                width: 250,
+              height: '100%',
+              borderRight: '1px solid #ccc',
+              position: 'sticky',
+              top: 0,
+              alignSelf: 'center',
+            
+            }}
+          >
+            <List>
+    {menuItems.map((item, index) => (
+      <ListItem
+        key={item.id}
+        disablePadding
+        sx={{ flexDirection: 'column', alignItems: 'flex-start' }}
       >
-        <ListItemText primary={item.label} />
-      </ListItemButton>
-
-      {/* Only show border if it's not the last item */}
-      {index !== menuItems.length - 1 && (
-        <Box
-          sx={{
-            width: '80%',
-            height: '1px',
-            backgroundColor: '#7D7BB7',
-            alignSelf: 'center',
-          }}
-        />
-      )}
-    </ListItem>
-  ))}
-</List>
-
-        </Box>
-  
-        {/* Scrollable Content */}
-        <Box
-          sx={{
-            flexGrow: 1,
-            overflowY: 'auto',
-            height: '500px',
-          }}
+        <ListItemButton
+          selected={selected === item.id}
+          onClick={() => setSelected(item.id)}
+          sx={{ width: '100%', textAlign: 'center' }}
         >
-          <Paper elevation={2} sx={{ padding: 2 }}>
-            <Typography variant="h6" gutterBottom>
-              {selectedItem.label}
-            </Typography>
-  
-            {/* Image */}
-            {selectedItem.image && (
-              <Box
-                component="img"
-                src={selectedItem.image}
-                alt={selectedItem.label}
-                sx={{ width: '50%', maxHeight: 200, objectFit: 'contain', mb: 2, borderRadius: 1 }}
-              />
-            )}
-  
-            {/* Paragraphs */}
-            {selectedItem.paragraphs.map((text, index) => (
-              <Typography key={index} variant="body1" >
-                {text}
+          <ListItemText primary={item.label} />
+        </ListItemButton>
+
+        {/* Only show border if it's not the last item */}
+        {index !== menuItems.length - 1 && (
+          <Box
+            sx={{
+              width: '80%',
+              height: '1px',
+              backgroundColor: '#7D7BB7',
+              alignSelf: 'center',
+            }}
+          />
+        )}
+      </ListItem>
+    ))}
+  </List>
+
+          </Box>
+    
+          {/* Scrollable Content */}
+          <Box
+            sx={{
+              flexGrow: 1,
+              overflowY: 'auto',
+              height: '500px',
+            }}
+          >
+            <Paper elevation={2} sx={{ padding: 2 }}>
+              <Typography variant="h6" gutterBottom>
+                {selectedItem.label}
               </Typography>
-            ))}
-          </Paper>
-        </Box>
-      </Box>
+    
+              {/* Image */}
+              {selectedItem.image && (
+                <Box
+                  component="img"
+                  src={selectedItem.image}
+                  alt={selectedItem.label}
+                  sx={{ width: '50%', maxHeight: 200, objectFit: 'contain', mb: 2, borderRadius: 1 }}
+                />
+              )}
+    
+              {/* Paragraphs */}
+              {selectedItem.paragraphs.map((text, index) => (
+                <Typography key={index} variant="body1" >
+                  {text}
+                </Typography>
+              ))}
+            </Paper>
+          </Box>
+            </Box>
+          </Container>
       </Box>
     );
   };

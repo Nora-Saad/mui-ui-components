@@ -58,8 +58,20 @@ const sharedTypography = {
   },
 };
 
+const breakpoints = {
+  values: {
+    xs: 0,
+    sm: 600,
+    md: 900,
+    lg: 1200,
+    xl: 1536,
+    xl2: 1350, 
+  },
+};
+
 // LIGHT THEME
 let lightTheme = createTheme({
+  breakpoints, 
   palette: {
     mode: 'light',
     text: {
@@ -89,6 +101,7 @@ let lightTheme = createTheme({
 
 // DARK THEME
 let darkTheme = createTheme({
+  breakpoints, 
   palette: {
     mode: 'dark',
     text: {

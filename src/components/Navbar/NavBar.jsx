@@ -44,29 +44,25 @@ const NavBar = () => {
  
 
   return (
-
-      <Container
-      maxWidth={scrolled ? false : 'xl'}
-        disableGutters
-        sx={{
-          position: 'fixed',
-          top: scrolled ? '0' : '18px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: scrolled ? '100%' : '100%',
-          height: '80px',
-          color: 'white',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          px: 0,
-          transition: 'all 0.3s ease-in-out',
-          zIndex: 100,
-        }}
-      >
-        <Box
+    <Box component="nav"
+    sx={{
+      position: 'fixed',
+      top: scrolled ? '0' : '18px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width:  '100%',
+      zIndex: 100,
+      transition: 'all 0.3s ease-in-out',
+      background: scrolled
+      ? 'rgb(185, 188, 226)'
+      : 'transparent',
+    }}
+    >
+      <Container maxWidth='xl'  sx={{ px: 0 }} >
+      <Box
           sx={{
-            width: scrolled ? '100%' : '90%',
+            width: scrolled ? '100%' :  '95%',
+            mx:  'auto',
             borderRadius: scrolled ? 0 : '100px',
             background: scrolled
               ? 'rgb(185, 188, 226)'
@@ -321,8 +317,9 @@ const NavBar = () => {
           )}
        
       </Box>
+        
       </Container>
-     
+      </Box>
     
   );
 };
