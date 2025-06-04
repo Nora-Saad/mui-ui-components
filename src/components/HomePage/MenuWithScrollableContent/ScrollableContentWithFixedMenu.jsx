@@ -110,57 +110,57 @@ const menuItems = [
   
     return (
 
-      <Box component="section" >
+      <Box component="section"  sx={{mb:10}}>
          <Container maxWidth="xl2" >
             <Box sx={{textAlign:"center"}}>
             <Typography variant="gradientSpan"   > Services</Typography>
             <Typography variant="h2"  >Check our Services</Typography>
             </Box>
 
-            <Box sx={{ display: 'flex', height: '100%', backgroundColor:'#f9f9f9' }}>
-          {/* Fixed Menu */}
-          <Box
-            sx={{
-                width: 250,
-              height: '100%',
-              borderRight: '1px solid #ccc',
-              position: 'sticky',
-              top: 0,
-              alignSelf: 'center',
-            
-            }}
-          >
-            <List>
-    {menuItems.map((item, index) => (
-      <ListItem
-        key={item.id}
-        disablePadding
-        sx={{ flexDirection: 'column', alignItems: 'flex-start' }}
-      >
-        <ListItemButton
-          selected={selected === item.id}
-          onClick={() => setSelected(item.id)}
-          sx={{ width: '100%', textAlign: 'center' }}
+            <Box sx={{ display: 'flex', height: '100%', backgroundColor:'rgba(255, 255, 255, 0.8)' }}>
+            {/* Fixed Menu */}
+            <Box
+              sx={{
+                width: 350,
+                height: '100%',
+                borderRight: '1px solid #ccc',
+                position: 'sticky',
+                top: 0,
+                alignSelf: 'center',
+              
+              }}
+            >
+              <List>
+      {menuItems.map((item, index) => (
+        <ListItem
+          key={item.id}
+          disablePadding
+          sx={{ flexDirection: 'column', alignItems: 'flex-start' }}
         >
-          <ListItemText primary={item.label} />
-        </ListItemButton>
+          <ListItemButton
+            selected={selected === item.id}
+            onClick={() => setSelected(item.id)}
+            sx={{ width: '100%', textAlign: 'center' }}
+          >
+            <ListItemText primary={item.label} />
+          </ListItemButton>
 
-        {/* Only show border if it's not the last item */}
-        {index !== menuItems.length - 1 && (
-          <Box
-            sx={{
-              width: '80%',
-              height: '1px',
-              backgroundColor: '#7D7BB7',
-              alignSelf: 'center',
-            }}
-          />
-        )}
-      </ListItem>
-    ))}
-  </List>
+          {/* Only show border if it's not the last item */}
+          {index !== menuItems.length - 1 && (
+            <Box
+              sx={{
+                width: '80%',
+                height: '1px',
+                backgroundColor: '#7D7BB7',
+                alignSelf: 'center',
+              }}
+            />
+          )}
+        </ListItem>
+      ))}
+    </List>
 
-          </Box>
+            </Box>
     
           {/* Scrollable Content */}
           <Box
@@ -170,8 +170,8 @@ const menuItems = [
               height: '500px',
             }}
           >
-            <Paper elevation={2} sx={{ padding: 2 }}>
-              <Typography variant="h6" gutterBottom>
+            <Paper elevation={2} sx={{ padding: 2, backgroundColor:'transparent'  }}>
+              <Typography variant="h3" gutterBottom sx={{ mt: 6 }}>
                 {selectedItem.label}
               </Typography>
     
@@ -181,7 +181,7 @@ const menuItems = [
                   component="img"
                   src={selectedItem.image}
                   alt={selectedItem.label}
-                  sx={{ width: '50%', maxHeight: 200, objectFit: 'contain', mb: 2, borderRadius: 1 }}
+                  sx={{ width: '50%',display: 'block', maxHeight: 200, objectFit: 'contain', mb: 2,mx:"auto", borderRadius: 1 }}
                 />
               )}
     
